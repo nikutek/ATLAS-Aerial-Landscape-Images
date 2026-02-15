@@ -1,0 +1,35 @@
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.cache
+
+# Virtual Environment - każdy tworzy własne
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Data - za duże
+train/
+val/
+test/
+data/
+
+# Runs - tylko zapisane wagi z treningu
+runs/*/weights/*.pt
+!runs/*/weights/best.pt
+!runs/*/weights/last.pt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
