@@ -2,9 +2,7 @@ import os
 import shutil
 import random
 
-# ==========================
-# KONFIGURACJA
-# ==========================
+
 DATA_DIR = "data"
 TRAIN_DIR = "train"
 VAL_DIR = "val"
@@ -18,9 +16,6 @@ SEED = 42
 
 IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff")
 
-# ==========================
-# FUNKCJE POMOCNICZE
-# ==========================
 
 def clear_directory(path):
     if not os.path.exists(path):
@@ -39,9 +34,6 @@ def get_images(folder):
         if f.lower().endswith(IMAGE_EXTENSIONS)
     ]
 
-# ==========================
-# GŁÓWNA LOGIKA
-# ==========================
 
 def split_dataset():
     random.seed(SEED)
@@ -97,9 +89,6 @@ def split_dataset():
 
     print("\n✅ Podział datasetu (train/val/test) zakończony.")
 
-# ==========================
-# ENTRY POINT
-# ==========================
 
 if __name__ == "__main__":
     split_dataset()
