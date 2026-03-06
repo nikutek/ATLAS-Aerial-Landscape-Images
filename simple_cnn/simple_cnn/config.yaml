@@ -1,0 +1,26 @@
+data:
+  raw_dir:       "../data/raw"
+  processed_dir: "../data/processed"
+
+  img_size:    224
+  batch_size:  64
+  num_workers: 6
+
+  mean: [0.3774, 0.3923, 0.3436]
+  std:  [0.1297, 0.1171, 0.1116]
+
+model:
+  num_classes: 15
+
+training:
+  epochs:        50
+  learning_rate: 0.001
+
+  scheduler:
+    step_size: 20
+    gamma:     0.2  # LR = LR * gamma
+
+
+output:
+  checkpoints_dir: "../checkpoints"
+  results_dir:     "../results"
